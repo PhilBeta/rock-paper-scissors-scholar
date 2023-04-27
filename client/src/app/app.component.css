@@ -1,0 +1,16 @@
+
+.title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    color: rgb(0, 0, 0);
+}
+
+svg {
+    overflow: visible;
+}
+
+.hflex {
+    flex-wrap: wrap;
+}

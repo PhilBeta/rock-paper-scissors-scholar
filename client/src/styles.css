@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+:root {
+    --ingredient-bg: bisque;
+    --ingredient-bg-disabled: #5F5F5F
+}
+
+.hflex {
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+    
+}
+
+.vflex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: stretch;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('assets/rps.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    
+}
+
+
+h1, h2, h3, p, li {
+    color: aliceblue;
+}
+
+label {
+    display: block;
+    font-size: small;
+    color: lightgoldenrodyellow;
+}
+
+p {
+    font-size: medium;
+}
+
+.bubble {
+    background-color: rgba(39, 29, 17, 0.85);
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    color: hsl(0, 0%, 100%);
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  

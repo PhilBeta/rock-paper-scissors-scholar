@@ -1,0 +1,67 @@
+<ng-template #rockTemplate> 
+    <h1>🪨</h1><p>Rock</p>
+</ng-template>
+<ng-template #paperTemplate> 
+    <h1>📄</h1><p>Paper</p>
+</ng-template>
+<ng-template #scissorsTemplate> 
+    <h1>✂️</h1><p>Scissors</p>
+</ng-template>
+
+
+
+<div class="selected-moves-panel">
+    <div class="player-chosen-move">
+        <label>Your Move</label>
+        <ng-container [ngSwitch]="game.playerPrevMove ?? game.playerMove"> 
+            <ng-container *ngSwitchCase="MoveType.Rock">
+                <ng-container *ngTemplateOutlet="rockTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="MoveType.Paper">
+                <ng-container *ngTemplateOutlet="paperTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="MoveType.Scissors">
+                <ng-container *ngTemplateOutlet="scissorsTemplate"></ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+    <div class="opponent-chosen-move">
+        
+        <label>Their Move</label>
+        
+        <!--Display the correct output depending on the opponent state-->
+        <ng-container [ngSwitch]="game.opponentState">
+            <ng-container *ngSwitchCase="OpponentState.Rock">
+                <ng-container *ngTemplateOutlet="rockTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="OpponentState.Paper">
+                <ng-container *ngTemplateOutlet="paperTemplate"></ng-container>
+            </ng-container>
+            <ng-container *ngSwitchCase="OpponentState.Scissors">
+                <ng-container *ngTemplateOutlet="scissorsTemplate"></ng-container>
+            </ng-container>   
+            <ng-container *ngSwitchCase="OpponentState.Thinking">
+                <p>Thinking...</p>
+            </ng-container>
+            <ng-container *ngSwitchCase="OpponentState.Ready">
+                <p>Ready.<br>Make your move.</p>
+            </ng-container>
+            <ng-container *ngSwitchCase="OpponentState.Error">
+                <p>Something messed up.<br>Try again.</p>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+
+
+
+<div class="game-status" *ngIf="game.gameStatus.length > 0">
+    <h2>{{ game.gameStatus }}</h2>
+</div>
+
+<!-- TODO Implement
+<div *ngIf="game.prevGame" class="opponent-move-justification"> 
+    <p>{{game.opponentMoveJustification}}</p>
+</div>
+-->

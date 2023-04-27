@@ -1,0 +1,26 @@
+
+
+
+:host {
+    background-color: burlywood;
+    border-radius: 1em;
+    text-align: center;
+    transition: transform 0.2s cubic-bezier(0.17,0.67,0.2,1.56), background-color 0.1s;
+    overflow: hidden;
+    padding: 8px;
+    user-select: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0 0 8px;
+}
+
+
+ :host:active {
+    transform: scale(0.95);
+    background-color: blueviolet;
+}
+
+:host.disabled:not(:active) {
+    background-color: var(--ingredient-bg-disabled);
+}
+

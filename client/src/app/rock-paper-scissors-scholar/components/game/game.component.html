@@ -1,0 +1,21 @@
+<div class="score-board bubble">
+    <p>You: {{ game.playerScore }} Them: {{ game.opponentScore }} </p>
+</div>
+
+<div class="move-choices">
+    <button class="bubble" (click)="game.setPlayerMove(MoveType.Rock)"><h1>🪨</h1><p>Rock</p></button>
+    <button class="bubble" (click)="game.setPlayerMove(MoveType.Paper)"><h1>📄</h1><p>Paper</p></button>
+    <button class="bubble" (click)="game.setPlayerMove(MoveType.Scissors)"><h1>✂️</h1><p>Scissors</p></button>
+</div>
+
+<div class="game-board-group">
+    <div *ngIf="game.prevJustification.length > 0" class="right bubble">
+        <label>My Reasoning</label>
+        <p>{{ game.prevJustification }}</p>
+    </div>
+    
+    <app-game-board> </app-game-board>
+    
+</div>
+
+

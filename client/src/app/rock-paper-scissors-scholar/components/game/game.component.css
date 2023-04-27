@@ -1,0 +1,70 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+h1, h2{
+    text-align: center;
+    flex-shrink: 1;
+    color: black;
+}
+.move-choices button {
+    padding: 0.5rem;
+    min-width: 7rem;
+}
+
+
+
+.move-choices {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.move-choices label {
+    font-size: medium;
+}
+
+h2 {
+  color: white;
+}
+.moves-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    
+}
+.moves-panel h2 {
+    flex-grow: 1;
+    justify-content: stretch;
+    min-width: 4em;
+}
+
+
+.score-board {
+     max-width: 10rem;
+     align-self: center;
+}
+.selected {
+    background-color: #d69418;
+  }
+
+
+.score-board p {
+    margin: 0px;
+}
+
+
+.game-board-group {
+    position: relative;
+}
+
+
+.game-board-group .right {
+    position: absolute;
+    left: 100%;
+    margin: 0 0 0 1rem;
+    width: 14rem;
+}
